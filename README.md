@@ -14,7 +14,8 @@ services:
     restart: always
     volumes:
       - "./your_app:/home/node/app"
-      - "./tmp/your_app/:/home/node/app/node_modules"
+      - "./tmp/your_app_npm/:/root/.npm/"
+      - "./tmp/your_app_node_modules/:/home/node/app/node_modules"
     restart: always
     command: "bash -c './start-in-docker.sh'"
     ports:
@@ -30,6 +31,6 @@ networks:
 ## local-build
 
 ```
-docker build --tag 'angular-cli-start' .
+docker build --rm --tag 'angular-cli-start' .
 ```
 
