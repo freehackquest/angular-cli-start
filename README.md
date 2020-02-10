@@ -8,7 +8,7 @@ version: '3'
 
 services:
   your_app:
-    image: freehackquest/angular-cli-start@latest
+    image: freehackquest/angular-cli-start:latest
     environment:
       - NODE_ENV=production
     restart: always
